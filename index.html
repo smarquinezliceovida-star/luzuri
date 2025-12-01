@@ -78,7 +78,8 @@
       h2 { font-size: 1.6rem; }
       header img { height: 70px; }
     }
-  </style>
+  .apartado { margin: 60px 0; padding: 40px; border-radius: 20px; background: #ffffffee; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+</style>
 </head>
 <body>
 
@@ -167,5 +168,101 @@
   <p>Desde formuladores hasta atención al cliente, todos compartimos la visión de ofrecer productos honestos y de alta calidad.</p>
 </div>
 
+  <div class="apartado">
+<section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres comprar LUZURI, hacer una consulta o colaborar con nosotros? ¡Estamos aquí para ti!</p>
+
+    <div class="contact-container">
+      <!-- FORMULARIO REAL -->
+      <form class="contact-form" action="#" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Correo electrónico:</label>
+        <input type="email" name="email" required>
+
+        <label>Mensaje:</label>
+        <textarea name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <!-- REDES Y WHATSAPP -->
+      <div class="contact-info">
+        <h3>Contáctanos directamente</h3>
+        <ul>
+          <li><strong>Email:</strong> smarquinez.liceovida@gmail.com</li>
+          <li><strong>Instagram:</strong> <a href="https://instagram.com/luzuri.ec" target="_blank">@luzuri.ec</a></li>
+          <li><strong>TikTok:</strong> <a href="#" target="_blank">@luzuri.ec</a></li>
+        </ul>
+
+        <a class="whatsapp-btn" href="https://wa.me/593969618977" target="_blank">💬 Escríbenos por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <style>
+    .contact-container {
+      display: flex;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-form, .contact-info {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background: #4c8c48;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #3b6c38;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da955;
+    }
+  </style>
 </body>
 </html>
+
+
+
