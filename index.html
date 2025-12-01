@@ -47,6 +47,10 @@
             margin-left: 140px;
             padding: 38px 20px 28px 0;
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* para centrar horizontal */
         }
         @media (max-width: 700px) {
             header {
@@ -72,6 +76,7 @@
             letter-spacing: 2px;
             color: #fff;
             text-shadow: 0 1px 6px rgba(0,0,0,0.17);
+            text-align: center; /* centrar texto */
         }
         header p {
             font-size: 1.18rem;
@@ -80,6 +85,7 @@
             color: #e4e1da;
             font-weight: 500;
             text-shadow: 0 1px 4px rgba(63,107,70,0.10);
+            text-align: center; /* también centrar subtítulo */
         }
         nav {
             display: flex;
@@ -155,7 +161,6 @@
             transition: var(--transition);
             opacity: 0.95;
         }
-        /* NUEVA CLASE PARA PRIMERA IMAGEN RECTANGULAR */
         .product-img-recta {
             border-radius: 0!important;
         }
@@ -272,7 +277,7 @@
             <h2 class="titulo-seccion">Filosofía Luzuri</h2>
             <h3 class="subtitulo-seccion">La esencia de nuestra marca</h3>
             <p>
-                El cabello rizado necesita atención y productos especialmente pensados para respetar su textura natural. Creamos soluciones prácticas que te permiten cuidar y disfrutar tus rizos sin[...]
+                El cabello rizado necesita atención y productos especialmente pensados para respetar su textura natural. Creamos soluciones prácticas que te permiten cuidar y disfrutar tus rizos sin complicaciones, celebrando la belleza auténtica de cada persona.
             </p>
         </section>
 
@@ -293,19 +298,12 @@
             <p>
                 Nuestra crema combina nutrición profunda, definición y protección en un solo paso, simplificando tu rutina diaria.
             </p>
-            <h4 class="subtitulo-seccion">Imagen del Producto</h4>
             <p>
-                El envase es amarillo con tapa verde y decoración vegetal. En el centro tiene el logo <strong>Luzuri</strong>, la frase <em>“TU RIZO SIEMPRE VIVO”</em> y demás información. El d[...]
+                El envase es amarillo con tapa verde y decoración vegetal. En el centro tiene el logo <strong>Luzuri</strong>, la frase <em>“TU RIZO SIEMPRE VIVO”</em> y demás información relacionada al producto. El diseño busca transmitir energía, naturaleza y vitalidad, inspirando confianza y frescura.
             </p>
-            <!-- Segunda imagen agregada aquí -->
-            <img src="example.png" alt="Crema Luzuri detalle" class="product-img" />
             <h4 class="subtitulo-seccion">Ingredientes principales</h4>
             <p>
                 Sábila, cacao, aguacate y nopal, cuidadosamente seleccionados por sus efectos hidratantes, fortalecedores y reparadores.
-            </p>
-            <h4 class="subtitulo-seccion">Lo que viene</h4>
-            <p>
-                Actualmente ofrecemos nuestro producto estrella, pero pronto vendrán nuevas fórmulas conscientes y efectivas para el cuidado natural de tu cabello rizado.
             </p>
         </section>
 
