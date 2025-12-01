@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luzuri</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -12,27 +13,35 @@
             background: #f6f4ee;
             color: #3a2e25;
         }
-       
-        
         header {
             background: linear-gradient(135deg, #5a8f61, #3f6b46);
-            padding: 60px 30px;
+            padding: 60px 30px 30px 30px;
             text-align: center;
             color: white;
         }
-
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            padding: 20px 0;
+        }
+        .logo-img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.11);
+        }
         header h1 {
-            margin: 0;
+            margin: 15px 0 0 0;
             font-size: 3rem;
             letter-spacing: 2px;
             font-weight: 700;
         }
-
         header p {
             font-size: 1.2rem;
-            opacity: 0.9;
+            opacity: 0.93;
         }
-
         nav {
             display: flex;
             justify-content: center;
@@ -44,41 +53,55 @@
             top: 0;
             z-index: 100;
         }
-
         nav a {
             text-decoration: none;
             font-weight: bold;
             color: #3f6b46;
             font-size: 1.1rem;
+            transition: color 0.2s;
         }
-
+        nav a:hover {
+            color: #5a8f61;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
         section {
-            padding: 60px 25px;
-            max-width: 1000px;
-            margin: auto;
+            padding: 45px 0;
         }
-
-        .box {
+        .apartado {
             background: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 18px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 60px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+            margin-bottom: 38px;
         }
-
         .titulo-seccion {
-            font-size: 2.3rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 7px;
             color: #3f6b46;
             font-weight: 700;
+            text-align: left;
         }
-
+        .subtitulo-seccion {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #5a8f61;
+            font-weight: 500;
+        }
+        .box-img-producto {
+            text-align: center;
+            margin-bottom: 22px;
+        }
         .product-img {
-            width: 100%;
+            width: 70%;
+            max-width: 330px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.13);
+            margin-bottom: 10px;
         }
-
         .boton-whatsapp {
             display: inline-block;
             background: #25d366;
@@ -89,16 +112,27 @@
             font-size: 1.1rem;
             margin-top: 15px;
             font-weight: bold;
+            box-shadow: 0 2px 10px rgba(37,211,102,0.11);
+            transition: background 0.2s;
         }
-
+        .boton-whatsapp:hover {
+            background: #209f53;
+        }
         footer {
             background: #3f6b46;
-            padding: 25px;
+            padding: 24px 0;
             text-align: center;
             margin-top: 50px;
             color: white;
         }
-
+        form {
+            background: #f3efe6;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            max-width: 520px;
+            margin: auto;
+        }
         form input, form textarea {
             width: 100%;
             padding: 12px;
@@ -106,8 +140,8 @@
             border: 1px solid #bbb;
             border-radius: 10px;
             font-size: 1rem;
+            background: #fff;
         }
-
         form button {
             background: #3f6b46;
             color: #fff;
@@ -117,13 +151,26 @@
             cursor: pointer;
             font-size: 1.1rem;
             margin-top: 10px;
+            transition: background 0.15s;
+        }
+        form button:hover {
+            background: #5a8f61;
+        }
+        @media (max-width: 700px) {
+            main { padding: 0 8px; }
+            .apartado { padding: 22px 10px; }
+            .product-img { width: 100%; max-width: 250px; }
+            .logo-img { max-width: 90px; }
+            .titulo-seccion { font-size: 1.4rem; }
+            .subtitulo-seccion { font-size: 1.05rem; }
         }
     </style>
 </head>
 <body>
-<div class="logo-container">
-    <img src="Adobe Express - file.png" alt="Luzuri Logo" class="logo-img">
-</div>
+    <div class="logo-container">
+        <img src="Adobe Express - file.png" alt="Luzuri Logo" class="logo-img" />
+    </div>
+
     <header>
         <h1>Luzuri</h1>
         <p>Calidad • Cuidado • Confianza</p>
@@ -136,50 +183,81 @@
         <a href="#contacto">Contacto</a>
     </nav>
 
-    <section id="inicio">
-        <h2 class="titulo-seccion">Bienvenido/a</h2>
-        <div class="box">
-            <p>En <strong>Luzuri</strong> creemos en la belleza que nace de la autenticidad. Nuestra marca surge con el propósito de ofrecer productos creados para realzar lo que ya es tuyo: tu textura, tu identidad y tu esencia. Cada fórmula está desarrollada con ingredientes naturales que nutren y protegen tu cabello desde la raíz hasta las puntas.</p>
-            <p>Sabemos que el cabello rizado necesita un cuidado especial y una rutina pensada para su naturaleza. Por eso, nos enfocamos en brindar soluciones prácticas y efectivas, permitiendo que cada rizo cobre vida sin perder su forma ni su definición. Queremos acompañarte en cada paso para que amar tu cabello sea parte de tu día a día.</p>
-            <p>Nuestro compromiso va más allá de ofrecer un simple producto: buscamos construir una experiencia de bienestar, conexión y confianza. En Luzuri, cada detalle refleja nuestra pasión por la calidad, la naturaleza y el respeto por la diversidad de rizos. Aquí, tu textura es protagonista.</p>
-        </div>
-    </section>
+    <main>
+        <section id="inicio" class="apartado">
+            <div>
+                <h2 class="titulo-seccion">Bienvenido/a</h2>
+                <h3 class="subtitulo-seccion">Descubre Luzuri</h3>
+                <p>
+                    En <strong>Luzuri</strong> creemos en la belleza auténtica y sencilla. Nuestra marca nace para acompañarte con productos que realzan tu esencia y cuidan lo mejor de ti.
+                </p>
+                <h4 class="subtitulo-seccion">Nuestra filosofía</h4>
+                <p>
+                    Sabemos que el cabello rizado requiere atención especial y rutinas a medida. Por eso, diseñamos soluciones prácticas que permiten cuidar, disfrutar y valorar tus rizos con confianza.
+                </p>
+                <h4 class="subtitulo-seccion">Compromiso Luzuri</h4>
+                <p>
+                    Más que productos, buscamos construir experiencias de bienestar y conexión. Cada detalle de Luzuri refleja nuestra pasión por la calidad y el respeto hacia tu naturaleza.
+                </p>
+            </div>
+        </section>
 
-    <section id="productos">
-        <h2 class="titulo-seccion">Nuestros productos</h2>
-        <div class="box">
-            <p>Nuestra crema para peinar 3 en 1 fue diseñada pensando en la comodidad y en la necesidad real de quienes buscan una rutina capilar más simple y eficiente. Combina nutrición profunda, fijación suave y definición natural en un solo paso, ideal para quienes desean resultados visibles sin complicaciones.</p>
-            <p>Su fórmula está enriquecida con ingredientes naturales como sábila, cacao, aguacate y nopal, seleccionados cuidadosamente por sus propiedades hidratantes, fortalecedoras y reparadoras. Estos elementos trabajan en conjunto para ofrecer rizos suaves, definidos y llenos de vitalidad.</p>
-            <p>Aunque actualmente ofrecemos solo este producto estrella, representa nuestra visión clara: crear soluciones conscientes y efectivas que respeten la esencia de tu cabello. Muy pronto ampliaremos nuestra línea para brindar una experiencia capilar más completa.</p>
-        </div>
-    </section>
+        <section id="productos" class="apartado">
+            <h2 class="titulo-seccion">Nuestros productos</h2>
+            <div class="box-img-producto">
+                <!-- Si tienes una imagen del producto, reemplaza el src por el correcto -->
+                <img src="product-example.png" alt="Crema para peinar Luzuri" class="product-img" />
+            </div>
+            <h3 class="subtitulo-seccion">Crema para peinar 3 en 1</h3>
+            <p>
+                Nuestra crema para peinar está pensada para la rutina diaria: combina nutrición profunda, definición y protección en un solo paso.
+            </p>
+            <h4 class="subtitulo-seccion">Ingredientes principales</h4>
+            <p>
+                Sábila, cacao, aguacate y nopal. Todos elegidos por sus propiedades hidratantes, fortalecedoras y reparadoras.
+            </p>
+            <h4 class="subtitulo-seccion">Próximo lanzamiento</h4>
+            <p>
+                Actualmente ofrecemos nuestro producto estrella. Pronto sumaremos nuevas soluciones inspiradas en la misma filosofía para el cuidado natural del cabello rizado.
+            </p>
+        </section>
 
-    <section id="nosotros">
-        <h2 class="titulo-seccion">Sobre nosotros</h2>
-        <div class="box">
-            <p>Luzuri nació con un propósito claro: devolverle al cabello rizado el lugar que merece dentro del mundo del cuidado personal. Durante años, los rizos fueron poco comprendidos, poco representados y, en muchos casos, estandarizados bajo expectativas irreales. Por eso decidimos crear una marca que no solo entienda su naturaleza, sino que también la celebre.</p>
-            <p>Desde nuestros primeros pasos, buscamos desarrollar productos que se alineen con la autenticidad de cada persona. Trabajamos con ingredientes naturales, procesos responsables y un enfoque que prioriza la salud capilar a largo plazo. No hacemos promesas vacías: cada fórmula nace de investigación, pruebas y mejoras constantes.</p>
-            <p>Para nosotr
+        <section id="nosotros" class="apartado">
+            <h2 class="titulo-seccion">Sobre nosotros</h2>
+            <h3 class="subtitulo-seccion">Nuestra Historia</h3>
+            <p>
+                Luzuri nació con el sueño de devolverle al cabello rizado el espacio y reconocimiento que merece. Después de años viendo los rizos poco comprendidos, decidimos crear alternativas respetuosas y efectivas.
+            </p>
+            <h3 class="subtitulo-seccion">Valores</h3>
+            <p>
+                Trabajamos con ingredientes naturales y procesos responsables, buscando el equilibrio entre calidad, sostenibilidad y autenticidad.
+            </p>
+            <h3 class="subtitulo-seccion">Equipo Luzuri</h3>
+            <p>
+                Somos un grupo apasionado por el bienestar, la belleza y la individualidad. Te acompañamos en cada etapa de tu rutina y crecimiento personal.
+            </p>
+        </section>
 
-    <section id="contacto">
-        <h2 class="titulo-seccion">Contacto</h2>
-
-        <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:30px;">
-            <p style="font-size:1.2rem; margin:0 0 10px 0;"><strong>WhatsApp:</strong></p>
-            <a href="https://wa.me/593969618977" target="_blank" style="display:inline-block; background:#25d366; color:white; padding:14px 22px; border-radius:10px; text-decoration:none; font-size:1.1rem; font-weight:bold;">💬 Contactar por WhatsApp</a>
-
-            <p style="font-size:1.2rem; margin:25px 0 10px 0;"><strong>Email:</strong></p>
-            <a href="mailto:smarquinez.liceovida@gmail.com" style="display:inline-block; background:#5e2ca5; color:white; padding:14px 22px; border-radius:10px; text-decoration:none; font-size:1.1rem; font-weight:bold;">📩 Enviar correo</a>
-        </div>
-
-        <h3 style="margin-top:40px;">Formulario de contacto</h3>
-        <form action="https://formsubmit.co/smarquinez.liceovida@gmail.com" method="POST">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
-            <button type="submit">Enviar mensaje</button>
-        </form>
-    </section>
+        <section id="contacto" class="apartado">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <h3 class="subtitulo-seccion">Habla con nosotros</h3>
+            <div style="margin-bottom:20px;">
+                <p><strong>WhatsApp:</strong> 
+                    <a href="https://wa.me/593969618977" class="boton-whatsapp" target="_blank">Enviar mensaje</a>
+                </p>
+                <p><strong>Email:</strong>
+                    <a href="mailto:smarquinez.liceovida@gmail.com" style="background:#5e2ca5; color:white; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:600;">Enviar correo</a>
+                </p>
+            </div>
+            <h3 class="subtitulo-seccion">Formulario de contacto</h3>
+            <form action="https://formsubmit.co/smarquinez.liceovida@gmail.com" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo" required>
+                <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Luzuri — Todos los derechos reservados</p>
