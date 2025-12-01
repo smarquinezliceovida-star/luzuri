@@ -15,39 +15,47 @@
         }
         header {
             background: linear-gradient(135deg, #5a8f61, #3f6b46);
-            padding: 60px 30px 30px 30px;
+            padding: 38px 30px 28px 30px;
             text-align: center;
             color: white;
+            position: relative;
         }
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-            padding: 20px 0;
-        }
-        .logo-img {
-            max-width: 150px;
-            height: auto;
+        .logo-img-header {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.11);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+        @media (max-width: 600px) {
+            .logo-img-header {
+                width: 48px;
+                height: 48px;
+                left: 16px;
+                top: 16px;
+            }
+            header h1 { font-size: 2rem; }
         }
         header h1 {
-            margin: 15px 0 0 0;
-            font-size: 3rem;
-            letter-spacing: 2px;
+            margin: 0 0 8px 0;
+            font-size: 2.5rem;
             font-weight: 700;
+            letter-spacing: 2px;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.18rem;
             opacity: 0.93;
+            margin-top: 0;
         }
         nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 32px;
             background: #fff;
-            padding: 18px;
+            padding: 18px 0;
             box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
@@ -57,60 +65,61 @@
             text-decoration: none;
             font-weight: bold;
             color: #3f6b46;
-            font-size: 1.1rem;
+            font-size: 1.13rem;
             transition: color 0.2s;
         }
         nav a:hover {
             color: #5a8f61;
         }
         main {
-            max-width: 1200px;
+            max-width: 1060px;
             margin: 0 auto;
             padding: 0 16px;
         }
         section {
-            padding: 45px 0;
+            margin-bottom: 44px;
         }
         .apartado {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 18px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-            margin-bottom: 38px;
+            background: #fff;
+            padding: 38px 28px;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.070);
+            margin-bottom: 24px;
         }
         .titulo-seccion {
-            font-size: 2.2rem;
-            margin-bottom: 7px;
+            font-size: 2rem;
             color: #3f6b46;
             font-weight: 700;
-            text-align: left;
+            margin-bottom: 7px;
+            margin-top: 0;
         }
         .subtitulo-seccion {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-size: 1.19rem;
             color: #5a8f61;
             font-weight: 500;
-        }
-        .box-img-producto {
-            text-align: center;
-            margin-bottom: 22px;
+            margin-bottom: 14px;
+            margin-top: 14px;
         }
         .product-img {
-            width: 70%;
-            max-width: 330px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.13);
+            width: 160px;
+            max-width: 80vw;
+            border-radius: 24px;
             margin-bottom: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background: #fff;
         }
         .boton-whatsapp {
             display: inline-block;
             background: #25d366;
             color: white;
-            padding: 14px 24px;
-            border-radius: 10px;
+            padding: 12px 22px;
+            border-radius: 9px;
             text-decoration: none;
-            font-size: 1.1rem;
-            margin-top: 15px;
+            font-size: 1.12rem;
+            margin-top: 8px;
             font-weight: bold;
             box-shadow: 0 2px 10px rgba(37,211,102,0.11);
             transition: background 0.2s;
@@ -126,12 +135,7 @@
             color: white;
         }
         form {
-            background: #f3efe6;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            max-width: 520px;
-            margin: auto;
+            padding: 12px 0 0 0;
         }
         form input, form textarea {
             width: 100%;
@@ -158,98 +162,111 @@
         }
         @media (max-width: 700px) {
             main { padding: 0 8px; }
-            .apartado { padding: 22px 10px; }
-            .product-img { width: 100%; max-width: 250px; }
-            .logo-img { max-width: 90px; }
-            .titulo-seccion { font-size: 1.4rem; }
-            .subtitulo-seccion { font-size: 1.05rem; }
+            .apartado { padding: 16px 7px; }
+            .product-img { width: 110px; max-width: 95vw; }
+            .titulo-seccion { font-size: 1.19rem; }
+            .subtitulo-seccion { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
-    <div class="logo-container">
-        <img src="Adobe Express - file.png" alt="Luzuri Logo" class="logo-img" />
-    </div>
-
     <header>
+        <img src="Adobe Express - file.png" alt="Luzuri Logo" class="logo-img-header" />
         <h1>Luzuri</h1>
         <p>Calidad • Cuidado • Confianza</p>
     </header>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
+        <a href="#bienvenida">Bienvenida</a>
+        <a href="#filosofia">Filosofía</a>
+        <a href="#compromiso">Compromiso</a>
+        <a href="#producto">Producto</a>
         <a href="#nosotros">Sobre nosotros</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
     <main>
-        <section id="inicio" class="apartado">
-            <div>
-                <h2 class="titulo-seccion">Bienvenido/a</h2>
-                <h3 class="subtitulo-seccion">Descubre Luzuri</h3>
-                <p>
-                    En <strong>Luzuri</strong> creemos en la belleza auténtica y sencilla. Nuestra marca nace para acompañarte con productos que realzan tu esencia y cuidan lo mejor de ti.
-                </p>
-                <h4 class="subtitulo-seccion">Nuestra filosofía</h4>
-                <p>
-                    Sabemos que el cabello rizado requiere atención especial y rutinas a medida. Por eso, diseñamos soluciones prácticas que permiten cuidar, disfrutar y valorar tus rizos con confianza.
-                </p>
-                <h4 class="subtitulo-seccion">Compromiso Luzuri</h4>
-                <p>
-                    Más que productos, buscamos construir experiencias de bienestar y conexión. Cada detalle de Luzuri refleja nuestra pasión por la calidad y el respeto hacia tu naturaleza.
-                </p>
-            </div>
+        <!-- Bienvenida -->
+        <section id="bienvenida" class="apartado">
+            <h2 class="titulo-seccion">Bienvenido/a a Luzuri</h2>
+            <h3 class="subtitulo-seccion">¿Quiénes somos?</h3>
+            <p>
+                En <strong>Luzuri</strong> te ayudamos a resaltar la belleza auténtica. Nuestra marca nace para acompañarte con productos para tu rutina capilar que cuidan y realzan lo mejor de ti.
+            </p>
         </section>
 
-        <section id="productos" class="apartado">
-            <h2 class="titulo-seccion">Nuestros productos</h2>
-            <div class="box-img-producto">
-                <!-- Si tienes una imagen del producto, reemplaza el src por el correcto -->
-                <img src="product-example.png" alt="Crema para peinar Luzuri" class="product-img" />
-            </div>
-            <h3 class="subtitulo-seccion">Crema para peinar 3 en 1</h3>
+        <!-- Filosofía -->
+        <section id="filosofia" class="apartado">
+            <h2 class="titulo-seccion">Filosofía Luzuri</h2>
+            <h3 class="subtitulo-seccion">La esencia de nuestra marca</h3>
             <p>
-                Nuestra crema para peinar está pensada para la rutina diaria: combina nutrición profunda, definición y protección en un solo paso.
+                El cabello rizado necesita atención y productos especialmente pensados para respetar su textura natural. Creamos soluciones prácticas que te permiten cuidar y disfrutar tus rizos sin complicaciones.
+            </p>
+        </section>
+
+        <!-- Compromiso -->
+        <section id="compromiso" class="apartado">
+            <h2 class="titulo-seccion">Nuestro Compromiso</h2>
+            <h3 class="subtitulo-seccion">Más que productos</h3>
+            <p>
+                Buscamos construir experiencias que generen bienestar y confianza. En cada detalle de Luzuri reflejamos nuestra pasión por la calidad, respeto y conexión contigo.
+            </p>
+        </section>
+
+        <!-- Producto -->
+        <section id="producto" class="apartado">
+            <h2 class="titulo-seccion">Nuestros productos</h2>
+            <h3 class="subtitulo-seccion">Crema para peinar 3 en 1</h3>
+            <img src="product-example.png" alt="Crema para peinar Luzuri" class="product-img" />
+            <p>
+                Nuestra crema combina nutrición profunda, definición y protección en un solo paso, simplificando tu rutina diaria.
+            </p>
+            <h4 class="subtitulo-seccion">Imagen del Producto</h4>
+            <p>
+                El envase es amarillo con tapa verde y decoración vegetal. En el centro tiene el logo <strong>Luzuri</strong>, la frase <em>“TU RIZO SIEMPRE VIVO”</em> y demás información. El diseño comunica naturalidad y cuidado ecuatoriano.
             </p>
             <h4 class="subtitulo-seccion">Ingredientes principales</h4>
             <p>
-                Sábila, cacao, aguacate y nopal. Todos elegidos por sus propiedades hidratantes, fortalecedoras y reparadoras.
+                Sábila, cacao, aguacate y nopal, cuidadosamente seleccionados por sus efectos hidratantes, fortalecedores y reparadores.
             </p>
-            <h4 class="subtitulo-seccion">Próximo lanzamiento</h4>
+            <h4 class="subtitulo-seccion">Lo que viene</h4>
             <p>
-                Actualmente ofrecemos nuestro producto estrella. Pronto sumaremos nuevas soluciones inspiradas en la misma filosofía para el cuidado natural del cabello rizado.
+                Actualmente ofrecemos nuestro producto estrella, pero pronto vendrán nuevas fórmulas conscientes y efectivas para el cuidado natural de tu cabello rizado.
             </p>
         </section>
 
+        <!-- Sobre nosotros -->
         <section id="nosotros" class="apartado">
-            <h2 class="titulo-seccion">Sobre nosotros</h2>
-            <h3 class="subtitulo-seccion">Nuestra Historia</h3>
+            <h2 class="titulo-seccion">Conócenos</h2>
+            <h3 class="subtitulo-seccion">Nuestra historia</h3>
             <p>
-                Luzuri nació con el sueño de devolverle al cabello rizado el espacio y reconocimiento que merece. Después de años viendo los rizos poco comprendidos, decidimos crear alternativas respetuosas y efectivas.
+                Luzuri nace con el propósito de devolverle al cabello rizado el lugar que merece. Tras años de ver los rizos poco valorados, decidimos crear alternativas respetuosas y efectivas.
             </p>
-            <h3 class="subtitulo-seccion">Valores</h3>
+            <h3 class="subtitulo-seccion">Nuestros valores</h3>
             <p>
-                Trabajamos con ingredientes naturales y procesos responsables, buscando el equilibrio entre calidad, sostenibilidad y autenticidad.
+                Trabajamos con ingredientes naturales y procesos responsables buscando el equilibrio entre calidad, sostenibilidad y autenticidad.
             </p>
-            <h3 class="subtitulo-seccion">Equipo Luzuri</h3>
+            <h3 class="subtitulo-seccion">El equipo Luzuri</h3>
             <p>
-                Somos un grupo apasionado por el bienestar, la belleza y la individualidad. Te acompañamos en cada etapa de tu rutina y crecimiento personal.
+                Somos personas apasionadas por el bienestar, la confianza y la belleza diversa. Te acompañamos en cada paso de tu rutina y crecimiento personal.
             </p>
         </section>
 
+        <!-- Contacto -->
         <section id="contacto" class="apartado">
             <h2 class="titulo-seccion">Contacto</h2>
-            <h3 class="subtitulo-seccion">Habla con nosotros</h3>
-            <div style="margin-bottom:20px;">
-                <p><strong>WhatsApp:</strong> 
-                    <a href="https://wa.me/593969618977" class="boton-whatsapp" target="_blank">Enviar mensaje</a>
-                </p>
-                <p><strong>Email:</strong>
-                    <a href="mailto:smarquinez.liceovida@gmail.com" style="background:#5e2ca5; color:white; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:600;">Enviar correo</a>
-                </p>
-            </div>
-            <h3 class="subtitulo-seccion">Formulario de contacto</h3>
+            <h3 class="subtitulo-seccion">¡Hablemos!</h3>
+            <p><strong>WhatsApp:</strong> 
+                <a href="https://wa.me/593969618977" class="boton-whatsapp" target="_blank">Enviar mensaje</a>
+            </p>
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:smarquinez.liceovida@gmail.com"
+                    style="background:#5e2ca5; color:white; padding:8px 18px; border-radius:7px; text-decoration:none; font-weight:600;">
+                    Enviar correo
+                </a>
+            </p>
+            <h3 class="subtitulo-seccion">Formulario</h3>
             <form action="https://formsubmit.co/smarquinez.liceovida@gmail.com" method="POST">
                 <input type="text" name="nombre" placeholder="Tu nombre" required>
                 <input type="email" name="email" placeholder="Tu correo" required>
