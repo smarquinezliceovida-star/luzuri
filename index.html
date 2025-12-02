@@ -17,6 +17,8 @@
             --borde-card: #e4e1da;
             --transition: all 0.25s cubic-bezier(.47,1.64,.41,.8);
             --radius: 16px;
+            --dorado: #d4a63a;
+            --dorado-dark: #b98c2f;
         }
         body {
             font-family: 'Roboto', sans-serif;
@@ -171,6 +173,70 @@
             box-shadow: 0 16px 32px rgba(63,107,70,0.15);
             opacity: 1;
         }
+
+        /* 🔥 NUEVO — Contenedor lado a lado para producto */
+        .producto-box {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: nowrap; /* desktop: lado a lado */
+        }
+
+        .producto-info {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 24px 30px;
+            border: 1px solid var(--borde-card);
+            box-shadow: var(--sombra);
+            width: 320px;
+            text-align: center;
+        }
+
+        .producto-info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--verde-oscuro);
+            font-weight: 700;
+        }
+
+        .precio-grande {
+            font-size: 2.6rem;
+            color: var(--dorado);
+            font-weight: bold;
+            margin: 12px 0;
+            letter-spacing: 1px;
+        }
+
+        .btn-carrito {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: var(--dorado);
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 6px 18px rgba(210,166,58,0.18);
+        }
+
+        .btn-carrito:hover {
+            background: var(--dorado-dark);
+            box-shadow: 0 8px 22px rgba(185,140,47,0.20);
+        }
+
+        .btn-carrito svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+            flex-shrink: 0;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+        }
+
         .boton-whatsapp {
             display: inline-block;
             background: #25d366;
@@ -187,18 +253,6 @@
         .boton-whatsapp:hover {
             background: #209f53;
         }
-        .boton-email {
-            background:#5e2ca5;
-            color:white;
-            padding:8px 18px;
-            border-radius:7px; 
-            text-decoration:none;
-            font-weight:600;
-            transition: background 0.2s;
-        }
-        .boton-email:hover {
-            background:#462090;
-        }
         footer {
             background: var(--verde-oscuro);
             padding: 24px 0;
@@ -206,43 +260,34 @@
             margin-top: 50px;
             color: white;
         }
-        form {
-            padding: 12px 0 0 0;
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 12px 0;
-            border: 1px solid #bbb;
-            border-radius: 10px;
-            font-size: 1rem;
-            background: #fff;
-            transition: border 0.2s;
-        }
-        form input:focus, form textarea:focus {
-            border-color: var(--verde-claro);
-            outline: none;
-        }
-        form button {
-            background: var(--verde-oscuro);
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            margin-top: 10px;
-            transition: background 0.15s;
-        }
-        form button:hover {
-            background: var(--verde-claro);
-        }
+
+        /* RESPONSIVE: en pantallas pequeñas, apilar imagen encima de info (Opción A) */
         @media (max-width: 700px) {
             main { padding: 0 4px; }
             .apartado { padding: 18px 7px; }
             .product-img { width: 150px; max-width: 95vw; }
             .titulo-seccion { font-size: 1.25rem; }
             .subtitulo-seccion { font-size: 1rem; }
+
+            .producto-box {
+                flex-direction: column; /* apilar: imagen arriba, info abajo */
+                gap: 18px;
+                align-items: center;
+            }
+
+            .producto-info {
+                width: 92%;
+                padding: 18px;
+            }
+
+            .precio-grande {
+                font-size: 2rem;
+            }
+
+            .btn-carrito {
+                font-size: 1rem;
+                padding: 10px 16px;
+            }
         }
     </style>
 </head>
@@ -302,7 +347,40 @@
         <section id="producto" class="apartado">
             <h2 class="titulo-seccion">Nuestros productos</h2>
             <h3 class="subtitulo-seccion">Crema para peinar 3 en 1</h3>
-            <img src="example.png" alt="Crema para peinar Luzuri" class="product-img product-img-recta" />
+
+            <!-- 🔥 NUEVO BLOQUE DEL PRODUCTO (IMAGEN + INFO) -->
+            <div class="producto-box" aria-label="Producto: Crema para rizos 3 en 1">
+                <img src="example.png" alt="Crema para peinar Luzuri" class="product-img product-img-recta" />
+
+                <div class="producto-info">
+                    <h3>Crema para rizos 3 en 1</h3>
+                    <div class="precio-grande" aria-hidden="true">$8,25</div>
+
+                    <!-- botón carrito (abre WhatsApp con mensaje) -->
+                    <a
+                      class="btn-carrito"
+                      href="https://wa.me/593969618977?text=Hola%20Luzuri%2C%20quiero%20comprar%20la%20Crema%20para%20rizos%203%20en%201%20($8%2C25).%20%C2%BFTiene%20stock%3F"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Comprar Crema para rizos 3 en 1 por WhatsApp"
+                    >
+                        <!-- SVG carrito (dorado) -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path fill="white" d="M7 4h-2l-3 7v2h2l3-7h11l3 7h2v-2l-3-7h-13zm0 9c-1.104 0-2 .896-2 2s.896 2 2 2 
+                                     2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 
+                                     2 2 2-.896 2-2-.896-2-2-2z"/>
+                        </svg>
+                        Comprar
+                    </a>
+
+                    <div style="margin-top:10px;">
+                        <a class="boton-whatsapp" href="https://wa.me/593969618977?text=Hola%20Luzuri%2C%20quiero%20comprar%20la%20Crema%20para%20rizos%203%20en%201" target="_blank" rel="noopener noreferrer">
+                            Enviar mensaje
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <p>
                 La crema para peinar Luzuri es el resultado de una fórmula única que combina nutrición profunda, definición y protección en un solo paso. Su textura ligera facilita la aplicación y te permite peinar y definir tus rizos sin esfuerzo. Es ideal para cualquier tipo de cabello rizado, desde ondas suaves hasta rizos más definidos, aportando elasticidad y ayudando a reducir el frizz para que cada día disfrutes de tu melena.
             </p>
